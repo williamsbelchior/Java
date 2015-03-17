@@ -1,49 +1,48 @@
-Public Class Conta{
+public class Conta {
   private int numConta;
   private double saldo;
   private double limiteCartao;
   private int senha;
   private static cont = 0;
   
-Public Conta (double saldo, double limiteCartao, int senha){  
+public Conta (double saldo, double limiteCartao, int senha){  
   numConta =  cont++;
   this.saldo = saldo;
   this.limiteCartao = limiteCartao;
   this.senha = senha;
 }
   
-Public void imprimir(){
+public void imprimir(){
   system.out.println("O número da conta é:" + numConta);
   system.out.println("O saldo é:" + saldo);
   system.out.println("O limite do cartão é:" + limiteCartao);
 }  
 
-Public void setlimiteCartao(double valor){
-  if limiteCartao = 3x saldo (acho que não é assim)
-    limiteCartao = valor (não sei se é isso!!)
+public void setlimiteCartao(double valor){
+  if (valor < (3 * saldo))
+    limiteCartao = valor;
   else
    system.out.println("O limite do cartão não pode ser tão alto")
 }
 
-Public int getlimiteCartao(){
+public int getlimiteCartao(){
   return limiteCartao;
 }
 
-Public void setsenha (int num){
-  if senha < não sei o que colocar aqui (se eu colocar 6 vai ser o número 6, não sei se posso colocar num e atribuir um valor 6 pra ele, acho que não!!)
-    
+public void setSenha (int num){
+  if (num.size() < 6)
+    senha = num;
   else
-   system.out.println ("A senha deve conter seis dígitos");
-}  
-Public int getsenha(){
-  return senha;
+    system.out.println ("A senha deve conter seis dígitos");
+}
 
-Public int numConta(){
+public int getSenha(){
+  return senha;
+}
+
+public int getNumConta(){
   return numConta;
 }
-}
-
-  
   
 }
 
