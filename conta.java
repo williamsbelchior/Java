@@ -30,7 +30,7 @@ public int getlimiteCartao(){
 }
 
 public void setSenha (int num){
-  if (num.size() < 6)
+  if (num.size() > 6)
     senha = num;
   else
     system.out.println ("A senha deve conter seis dígitos");
