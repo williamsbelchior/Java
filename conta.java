@@ -2,10 +2,10 @@ public class Conta {
   private int numConta;
   private double saldo;
   private double limiteCartao;
-  private int senha;
+  private String senha;
   private static cont = 0;
   
-public Conta (double saldo, double limiteCartao, int senha){  
+public Conta (double saldo, double limiteCartao, String senha){  
   numConta =  cont++;
   this.saldo = saldo;
   this.limiteCartao = limiteCartao;
@@ -29,14 +29,14 @@ public int getlimiteCartao(){
   return limiteCartao;
 }
 
-public void setSenha (int num){
-  if (num.size() > 6)
-    senha = num;
-  else
+public void setSenha (String valor){
+  if (valor.length() < 6)
     system.out.println ("A senha deve conter seis dígitos");
+  else
+    senha = valor;
 }
 
-public int getSenha(){
+public String getSenha(){
   return senha;
 }
 
